@@ -6,3 +6,10 @@ TX phase tuning results:
 2700->OK
 2475->KO
 
+with PLLOUT2:
+0000->KO
+3375->KO
+3150->OK
+2925->OK
+2700->OK
+2475->KO
