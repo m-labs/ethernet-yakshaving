@@ -26,7 +26,9 @@ class Sniffer(Module):
         self.sync.eth_rx += stb_r.eq(eth_phy.source.stb)
         self.comb += sof.eq(eth_phy.source.stb & ~stb_r)
 
-        self.submodules += add_probe_buffer("eth", "data", eth_phy.source.data,
+        stb_data = Signal(9)
+        self.comb += stb_data.eq(Cat(eth_phy.source.data, eth_phy.source.stb))
+        self.submodules += add_probe_buffer("eth", "data", stb_data,
                                             trigger=sof, depth=128,
                                             clock_domain="eth_rx")
 
