@@ -93,7 +93,7 @@ class Transmitter(Module):
 
                 # 125MHz outputs
                 p_CLKOUT0_DIVIDE=8, p_CLKOUT0_PHASE=0.0, o_CLKOUT0=pll_eth_tx,
-                p_CLKOUT1_DIVIDE=8, p_CLKOUT1_PHASE=135.0, o_CLKOUT1=pll_eth_tx_ext,
+                p_CLKOUT1_DIVIDE=8, p_CLKOUT1_PHASE=292.5, o_CLKOUT1=pll_eth_tx_ext,
             ),
             Instance("BUFG", i_I=pll_eth_tx, o_O=self.cd_sys.clk),
             AsyncResetSynchronizer(self.cd_sys, ~pll_locked)
