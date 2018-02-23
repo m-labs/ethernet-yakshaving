@@ -6,10 +6,17 @@ TX phase tuning results:
 2700->OK
 2475->KO
 
-with PLLOUT2:
+with CLKOUT2:
 0000->KO
 3375->KO
 3150->OK
 2925->OK
 2700->OK
 2475->KO
+
+with SLEW=FAST, DRIVE=16:
+0225->KO
+0000->OK
+2475->OK
+2250->OK
+2025->KO
